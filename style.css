@@ -1,12 +1,40 @@
-.donutTable {
-  background-color: orange;
-
+body {
+  background-color: #A6BDC8;
+  font-family: "Lucida Console", Courier, monospace, sans-serif;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
-thead {
-  border: 1px solid black;
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.firstRow th{
-  border-collapse: collapse;
+.logo {
+  height: 100px;
+  width: 100px;
 }
+
+#topPot {
+  background-color: #FAF4EE;
+  border-style: solid;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#form {
+  border: solid #918F90;
+  margin: 0 auto;
+  max-width: 100%
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 0 auto;
+}
+
+
+
