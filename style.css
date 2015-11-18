@@ -1,0 +1,12 @@
+.donutTable {
+  background-color: orange;
+
+}
+
+thead {
+  border: 1px solid black;
+}
+
+.firstRow th{
+  border-collapse: collapse;
+}

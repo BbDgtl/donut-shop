@@ -1,1 +1,21 @@
-# donut-shop
+*******************************************************************************
+
+                                    ___
+                                 .-"   "-.
+                               .'   . ;   `.
+                              /    : . ' :  \
+                             |   `  .-. . '  |
+                             |  :  (   ) ; ` |
+                             |   :  `-'   :  |
+                              \   .` ;  :   /
+                               `.   . '   .'
+                                 `-.___.-'
+
+
+This program will calculate the number of donuts each location must make each
+day.
+
+**Added this to make changes because I accidentally worked only on master and
+renamed it to "model"!**
+
+**Screwed everything up and made a new repo to do things as directed"**
