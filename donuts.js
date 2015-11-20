@@ -59,3 +59,35 @@ var locationArray = [];
 for (var i = 0; i < locationArray.length; i++) {
   locationArray[i].createRow();
 }
+
+//Add a button tag that saves the location in the following manner:
+//Insantiate a new DonutShop Object with the user supplied data from
+//the input tags.
+//Appends a row to the table using the new objects hourly and daily
+//donut totals.
+//var shopsArray = []
+
+var addLocation = function(newLocation, newMin, newMax, newAvg) {
+  var newShop = new DonutShop();
+
+  var handleNewShopData = function() {
+    var newLocation = document.getElementById("locations").value;
+    var newMin = document.getElementById("min").value;
+    var newMax = document.getElementById("max").value;
+    var newAvg = document.getElementById("avg").value;
+    var newShop = addLocation();
+    locationArray.push(newShop);
+
+  newShop.render();
+  for (var i = 0; i < locationArray.length; i++) {
+    if (newShop.shopLocation === locationArray[i].shopLocation) {
+      shopLocation[i] = newShop;
+      shopLocation[i].splice(-1, 1);
+      createRow();
+    }
+  }
+
+  };
+};
+
+

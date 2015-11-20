@@ -1,14 +1,18 @@
-body {
-  background-color: #A6BDC8;
-  font-family: "Lucida Console", Courier, monospace, sans-serif;
-  margin: 0 auto;
-  max-width: 80%;
+* {
+   font-family: "Lucida Console", Courier, monospace, sans-serif;
 }
 
-#header {
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #A6BDC8;
+}
+
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo {
@@ -16,25 +20,53 @@ body {
   width: 100px;
 }
 
-#topPot {
+#intro {
+  max-width: 100%;
+}
+
+table {
   background-color: #FAF4EE;
   border-style: solid;
   margin: 0 auto;
   max-width: 100%;
 }
 
-#form {
-  border: solid #918F90;
-  margin: 0 auto;
-  max-width: 100%
+thead {
+  background-color: #A6BDC8;
 }
 
-.input {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-right: 0 auto;
+th {
+  border: 1px solid black;
 }
+
+tr {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+form {
+  border: 1px solid black;
+}
+
+.inputs {
+  max-width: 100%;
+  clear: both;
+}
+
+.inputs input {
+  max-width: 100%;
+  clear: both;
+}
+label {
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+}
+
+
 
 
 

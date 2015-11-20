@@ -7,15 +7,14 @@
       <link rel="stylesheet" href="style.css" type="text/css">
 
     </head>
-    <body id="main">
 
-      <header id="header">
+    <body id="main">
+      <header>
         <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg">
         <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
       </header>
 
-      <main>
-        <p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day.</p>
+        <p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p>
 
         <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
           <thead id="heading" class="firstRow">
@@ -36,21 +35,28 @@
           </thead>
         </table>
 
-        <div id="form">
-          <form>
-            <input class="input" alt="Location name.">Location Name</input>
-            <input class="input" alt="Minimum Customers per Hour.">Min. Customers per Hour</input>
-            <input class="input" alt="Maximum Customers per Hour.">Max. Customers per Hour</input>
-            <input class="input" alt="Average Donuts Purchased.">Average Donuts Purchased per Customer</input>
-          </form>
-        </div>
+      <main>
+          <div class="inputs">
+            <form id="forms">
+              <label>Location Name:</label>
+                <input id="location" type="text" name="locale" alt="Location name."></input>
+              <label>Min. Customers per Hour:</label>
+                <input id="min" type="number" name="min" alt="Minimum Customers per Hour."></input>
+              <label>Max. Customers per Hour:</label>
+                <input id="max" type="number" name="max" alt="Maximum Customers per Hour."></input>
+              <label>Avg. Donuts Purchased:</label>
+                <input id="avg" type="number" name"average" alt="Average Donuts Purchased."></input>
+              <button id="calc" alt="Press to submit new data.">Add New Data</button>
+            </form>
+          </div>
 
-        <button id="calc" alt="Press to submit new data.">Add New Data</button>
       </main>
 
       <footer>
-        <script src="donuts.js"></script>
+
       </footer>
+
+        <script src="donuts.js"></script>
 
     </body>
   </html>
