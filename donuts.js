@@ -4,6 +4,7 @@ function DonutShop(shopLocation, custMin, custMax, donutAvg) {
   this.custMin = custMin;
   this.custMax = custMax;
   this.donutAvg= donutAvg;
+  var totalMade = 0;
 }
 
 //generate random # of customers
@@ -29,8 +30,6 @@ for (var i = 0; i < tableHeaderData.length; i++) {
   createHead.textContent = tableHeaderData[i];
   headerRow.appendChild(createHead);
 }
-
-//donutTable.appendChild(headerRow);
 
 //first row
 DonutShop.prototype.createRow = function() {
@@ -65,7 +64,6 @@ for (var i = 0; i < locationArray.length; i++) {
 //the input tags.
 //Appends a row to the table using the new objects hourly and daily
 //donut totals.
-//var shopsArray = []
 
 var addLocation = function(newLocation, newMin, newMax, newAvg) {
   var newShop = new DonutShop();
@@ -88,6 +86,12 @@ var addLocation = function(newLocation, newMin, newMax, newAvg) {
   }
 
   };
+
+  var calcButton = document.getElementById("calc");
+calcButton.addEventListener("click", handleNewShopData);
+
 };
+
+
 
 
