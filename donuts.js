@@ -143,7 +143,7 @@ var handleNewShopData = function() {
 // ballard.renderTable();
 
 var calcButton = document.getElementById("calc");
-calcButton.addEventListener("click", handleNewShopData, false);
+calcButton.addEventListener("click", handleNewShopData);
 
 //*********************//CHART.JS PRACTICE//**************************************//
 
