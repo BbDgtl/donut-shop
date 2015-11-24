@@ -158,15 +158,15 @@ for (var i = 0; i < locationsArray.length; i++) {
 //   createRow();
 // }
 
-
-var newShopData = function(){
+var newShopData = function(event) {
+  event.preventDefault();
   var newLocationName = document.getElementById('location').value;
   var newMinCust = document.getElementById('min').value;
   var newMaxCust = document.getElementById('max').value;
   var newAverage = document.getElementById('avg').value;
   var newLocation = new DonutShop(newLocation, newMin, newMax, newAvg);
   var newContent = document.getElementById('topPot');
-  content.appendChild(newLocation.render());
+  newLocation.appendChild(newContent.render());
 };
 
 var calcButton = document.getElementById("calc");
