@@ -112,38 +112,68 @@ for (var i = 0; i < locationsArray.length; i++) {
 }
 
 //**********************//Adding New Locations//**********************************//
+//1. Create the form in HTML and add <input> tags for the following attributes:
+//a) Location Name
+//b) Minimum Customers per Hour
+//c) Maximum Custoemrs per Hour
+//d) Average Donuts Purchased per Customer.
+//2. Then, add a <button> tag that saves the location in the following manner:
+//a) Instantiate a new DonutShop object.
+//b) Appends a row to the table using the new objects hourly and daily donut
+//totals.
+//3. Once you figure out how to "ADD A NEW LOCATION", try using the same HTML
+//elements to update an existing location.
+//4. Once you figure out how to update an existing location, try adding a few
+//"EASTER EGGS" in the code.
 
-var addLocation = function(newLocation, newMin, newMax, newAvg) {
-  var newShop = new DonutShop();
-  return newShop;
+// var addLocation = function(newLocation, newMin, newMax, newAvg) {
+//   var newShop = new DonutShop();
+//   return newShop;
+// };
+
+// var handleNewShopData = function() {
+//   var newLocation = document.getElementById("location").value;
+//   var newMin = document.getElementById("min").value;
+//   var newMax = document.getElementById("max").value;
+//   var newAvg = document.getElementById("avg").value;
+//   var newShop = addLocation();
+//   locationsArray.push(newShop);
+
+//   newShop.createRow();
+//   for (var i = 0; i < locationsArray.length; i++) {
+//     if (newShop.shopLocation === locationsArray[i].shopLocation) {
+//       shopLocation[i] = newShop;
+//       shopLocation[i].splice(-1, 1);
+//     }
+//   }
+// };
+
+// function userStore(){
+//   var newLocation = (document.getElementById('location').value);
+//   var newMin =  Number(document.getElementById('min').value);
+//   var newMax =  Number(document.getElementById('max').value);
+//   var newAvg = parseFloat(document.getElementById('avg').value);
+//   var newLoc = new DonutShop (newLocation, newMin, newMax, newAvg);
+//   shops.push(newLocation);
+//   createRow();
+// }
+
+
+var newShopData = function(){
+  var newLocationName = document.getElementById('location').value;
+  var newMinCust = document.getElementById('min').value;
+  var newMaxCust = document.getElementById('max').value;
+  var newAverage = document.getElementById('avg').value;
+  var newLocation = new DonutShop(newLocation, newMin, newMax, newAvg);
+  var newContent = document.getElementById('topPot');
+  content.appendChild(newLocation.render());
 };
-
-var handleNewShopData = function() {
-  var newLocation = document.getElementById("locations").value;
-  var newMin = document.getElementById("min").value;
-  var newMax = document.getElementById("max").value;
-  var newAvg = document.getElementById("avg").value;
-  var newShop = addLocation();
-  locationsArray.push(newShop);
-
-  newShop.createRow();
-  for (var i = 0; i < locationsArray.length; i++) {
-    if (newShop.shopLocation === locationsArray[i].shopLocation) {
-      shopLocation[i] = newShop;
-      shopLocation[i].splice(-1, 1);
-      renderShops();
-    }
-  }
-};
-
-// downtown.renderTable();
-// capitolHill.renderTable();
-// southLakeUnion.renderTable();
-// wedgewood.renderTable();
-// ballard.renderTable();
 
 var calcButton = document.getElementById("calc");
-calcButton.addEventListener("click", handleNewShopData);
+calcButton.addEventListener("click", newShopData, false);
+
+// var calcButton = document.getElementById("calc");
+// calcButton.addEventListener("click", handleNewShopData);
 
 //*********************//CHART.JS PRACTICE//**************************************//
 
