@@ -22,14 +22,14 @@
 //**********************************//*****************************************//
 
 //Create the Donut Shop Model.
-function DonutShop (shopLocation, minCustomers, maxCustomers, avgDonuts) {
+var DonutShop = function (shopLocation, minCustomers, maxCustomers, avgDonuts) {
   this.shopLocation = shopLocation;
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
   this.avgDonuts = avgDonuts;
   this.totalDonutsPerHour = [];
   this.donutSum = 0;
-}
+};
 
 //Generate a random # of customers.
 DonutShop.prototype.genRandom = function() {
