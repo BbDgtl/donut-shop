@@ -126,54 +126,42 @@ for (var i = 0; i < locationsArray.length; i++) {
 //4. Once you figure out how to update an existing location, try adding a few
 //"EASTER EGGS" in the code.
 
-// var addLocation = function(newLocation, newMin, newMax, newAvg) {
-//   var newShop = new DonutShop();
-//   return newShop;
-// };
-
-// var handleNewShopData = function() {
-//   var newLocation = document.getElementById("location").value;
-//   var newMin = document.getElementById("min").value;
-//   var newMax = document.getElementById("max").value;
-//   var newAvg = document.getElementById("avg").value;
-//   var newShop = addLocation();
-//   locationsArray.push(newShop);
-
-//   newShop.createRow();
-//   for (var i = 0; i < locationsArray.length; i++) {
-//     if (newShop.shopLocation === locationsArray[i].shopLocation) {
-//       shopLocation[i] = newShop;
-//       shopLocation[i].splice(-1, 1);
-//     }
-//   }
-// };
-
-// function userStore(){
-//   var newLocation = (document.getElementById('location').value);
-//   var newMin =  Number(document.getElementById('min').value);
-//   var newMax =  Number(document.getElementById('max').value);
-//   var newAvg = parseFloat(document.getElementById('avg').value);
-//   var newLoc = new DonutShop (newLocation, newMin, newMax, newAvg);
-//   shops.push(newLocation);
-//   createRow();
-// }
-
 var newShopData = function(event) {
   event.preventDefault();
   var newLocationName = document.getElementById('location').value;
   var newMinCust = document.getElementById('min').value;
   var newMaxCust = document.getElementById('max').value;
   var newAverage = document.getElementById('avg').value;
-  var newLocation = new DonutShop(newLocation, newMin, newMax, newAvg);
+  var newLocation = new DonutShop(newLocationName, newMinCust, newMaxCust, newAverage);
   var newContent = document.getElementById('topPot');
-  newLocation.appendChild(newContent.render());
+  newLocation.getDonutsByHour();
+  newLocation.createRow();
 };
 
 var calcButton = document.getElementById("calc");
 calcButton.addEventListener("click", newShopData, false);
 
-// var calcButton = document.getElementById("calc");
-// calcButton.addEventListener("click", handleNewShopData);
+//Update an existing location.
+var updateStore = function(event) {
+  event.preventDefault();
+  var newLocationName = document.getElementById('location').value;
+  var newMinCust = document.getElementById('min').value;
+  var newMaxCust = document.getElementById('max').value;
+  var newAverage = document.getElementById('avg').value;
+  for (var i = 0; i < locationsArray.length; i++) {
+    if (newLocationName === locationsArray[i].shopLocation) {
+      locationsArray.splice(i, 1);
+
+      var newLocation = new DonutShop(newLocationName, newMinCust, newMaxCust, newAverage);
+      newLocation.getDonutsByHour();
+      newLocation.createRow();
+      return;
+    }
+  }
+};
+
+var updateButton = document.getElementById("update");
+updateButton.addEventListener("click", updateStore, false);
 
 //*********************//CHART.JS PRACTICE//**************************************//
 
