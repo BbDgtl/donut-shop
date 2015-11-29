@@ -6,60 +6,61 @@
 
       <link rel="stylesheet" href="style.css" type="text/css">
 
-      <style></style>
-
     </head>
-    <body>
 
-      <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
+    <body id="main">
+      <header>
+        <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg">
+        <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
+      </header>
 
-      <p>This table displays the number of donuts each Top Pot Donuts location should make per hour, per day.</p>
+        <p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p>
 
-      <table id="topPot" class="donutTable">
-        <thead id="heading" class="firstRow">
-          <th scope="col">Top Pot Locations</th>
-          <th scope="col">7:00AM</th>
-          <th scope="col">8:00AM</th>
-          <th scope="col">9:00AM</th>
-          <th scope="col">10:00AM</th>
-          <th scope="col">11:00AM</th>
-          <th scope="col">12:00AM</th>
-          <th scope="col">1:00PM</th>
-          <th scope="col">2:00PM</th>
-          <th scope="col">3:00PM</th>
-          <th scope="col">4:00PM</th>
-          <th scope="col">5:00PM</th>
-          <th scope="col">6:00PM</th>
-        </thead>
+        <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
+          <thead id="heading" class="firstRow">
+            <th scope="col" class="heading">Top Pot Locations</th>
+            <th scope="col" class="heading">7:00AM</th>
+            <th scope="col" class="heading">8:00AM</th>
+            <th scope="col" class="heading">9:00AM</th>
+            <th scope="col" class="heading">10:00AM</th>
+            <th scope="col" class="heading">11:00AM</th>
+            <th scope="col" class="heading">12:00AM</th>
+            <th scope="col" class="heading">1:00PM</th>
+            <th scope="col" class="heading">2:00PM</th>
+            <th scope="col" class="heading">3:00PM</th>
+            <th scope="col" class="heading">4:00PM</th>
+            <th scope="col" class="heading">5:00PM</th>
+            <th scope="col" class="heading">6:00PM</th>
+            <th scope="col" class="heading">Totals</th>
+          </thead>
+        </table>
 
-        <tr id="downtown">
-          <th scope="row">Downtown</th>
+      <main>
+          <div class="inputs">
+            <form id="forms">
+              <label>Location Name:</label>
+                <input id="location" type="text" name="locale" alt="Location name."></input>
+              <label>Min. Customers per Hour:</label>
+                <input id="min" type="number" name="min" alt="Minimum Customers per Hour."></input>
+              <label>Max. Customers per Hour:</label>
+                <input id="max" type="number" name="max" alt="Maximum Customers per Hour."></input>
+              <label>Avg. Donuts Purchased:</label>
+                <input id="avg" type="number" name="average" alt="Average Donuts Purchased."></input>
+              <button id="calc" alt="Press to submit new data.">Add New Data</button>
+              <button id="update" alt="Press to update existing locations">Update Existing Location</button>
+            </form>
+          </div>
+      </main>
 
-        </tr>
+      <footer>
 
-        <tr id="capitolHill">
-          <th scope="row">Capitol Hill</th>
+      </footer>
 
-        </tr>
+      <canvas id='myChart' height='400' width='1000'></canvas>
 
-        <tr id="slu">
-          <th scope="row">South Lake Union</th>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
 
-        </tr>
-
-        <tr id="wedgewood">
-          <th scope="row">Wedgewood</th>
-
-        </tr>
-
-        <tr id="ballard">
-          <th scope="row">Ballard</th>
-
-        </tr>
-
-      </table>
-
-      <script src="donuts.js"></script>
+        <script src="donuts.js"></script>
 
     </body>
   </html>
