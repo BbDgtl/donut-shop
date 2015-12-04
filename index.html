@@ -1,84 +1,95 @@
 <!DOCTYPE html>
   <html>
     <head>
-
       <title>Top Pot Donuts</title>
-      <!-- This is the HTML for my Donut Shop project. At this time, it will print out data of existing shops in a table, it will also add NEW data when inputted and should update data as well. There is also an easter egg included. 12/01/2015 Adding layout and styling to my donnut shop page. -->
+
+      <!-- This is the HTML for my Donut Shop project. At this time, it will print out data of existing shops in a table, it will also add NEW data when inputted and should update data as well. There is also an easter egg included. 12/01/2015 Adding layout and styling to my donut shop page. -->
 
       <link rel="stylesheet" href="style.css" type="text/css">
+
       <!-- This link is supposed to help with screen width and shrinking/stretching depending on available viewscreen. -->
+
       <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="800.css" />
-
     </head>
+    <div id = "page">
+      <body id="main">
 
-    <body id="main">
-      <div id="header">
-        <header>
-          <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg" />
-          <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
-          <nav>
-            <ul>
-              <li><a href="#name_of_target">Biography</a></li>
-              <li>Calculator</li>
-              <li>Chart</li>
-            </ul>
-          </nav>
-        </header>
-      </div>
+        <!--
+        1. Add either a fixed width or fluid width layout.
+        2. Extend your donus shop program with the following CSS components:
+          -An element that uses fixed positioning.
+          -An element that uses absolute positioning.
+          -An element that uses relative positioning.
+        -->
 
-      <div id="introParagraph">
-        <a name="bioLink"><p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p></a>
-      </div>
+        <div id="header">
+          <header>
+            <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg" />
+            <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
+            <nav>
+              <ul>
+                <li><a href="#name_of_target">Biography</a></li>
+                <li>Calculator</li>
+                <li>Chart</li>
+              </ul>
+            </nav>
+          </header>
+        </div>
 
-      <div id="donutTable">
-        <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
-          <thead id="heading" class="firstRow">
-            <th scope="col" class="heading">Top Pot Locations</th>
-            <th scope="col" class="heading">7:00AM</th>
-            <th scope="col" class="heading">8:00AM</th>
-            <th scope="col" class="heading">9:00AM</th>
-            <th scope="col" class="heading">10:00AM</th>
-            <th scope="col" class="heading">11:00AM</th>
-            <th scope="col" class="heading">12:00AM</th>
-            <th scope="col" class="heading">1:00PM</th>
-            <th scope="col" class="heading">2:00PM</th>
-            <th scope="col" class="heading">3:00PM</th>
-            <th scope="col" class="heading">4:00PM</th>
-            <th scope="col" class="heading">5:00PM</th>
-            <th scope="col" class="heading">6:00PM</th>
-            <th scope="col" class="heading">Totals</th>
-          </thead>
-        </table>
-      </div>
+        <div id="introParagraph">
+          <a name="bioLink"><p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p></a>
+        </div>
 
-      <main>
-          <div class="inputs">
-            <form id="forms">
-              <label>Location Name:</label>
-                <input id="location" type="text" name="locale" alt="Location name."></input>
-              <label>Min. Customers per Hour:</label>
-                <input id="min" type="number" name="min" alt="Minimum Customers per Hour."></input>
-              <label>Max. Customers per Hour:</label>
-                <input id="max" type="number" name="max" alt="Maximum Customers per Hour."></input>
-              <label>Avg. Donuts Purchased:</label>
-                <input id="avg" type="number" name="average" alt="Average Donuts Purchased."></input>
-              <button id="calc" alt="Press to submit new data.">Add New Data</button>
-              <button id="update" alt="Press to update existing locations">Update Existing Location</button>
-            </form>
-          </div>
-      </main>
+        <div id="donutTable">
+          <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
+            <thead id="heading" class="firstRow">
+              <th scope="col" class="heading">Top Pot Locations</th>
+              <th scope="col" class="heading">7:00AM</th>
+              <th scope="col" class="heading">8:00AM</th>
+              <th scope="col" class="heading">9:00AM</th>
+              <th scope="col" class="heading">10:00AM</th>
+              <th scope="col" class="heading">11:00AM</th>
+              <th scope="col" class="heading">12:00AM</th>
+              <th scope="col" class="heading">1:00PM</th>
+              <th scope="col" class="heading">2:00PM</th>
+              <th scope="col" class="heading">3:00PM</th>
+              <th scope="col" class="heading">4:00PM</th>
+              <th scope="col" class="heading">5:00PM</th>
+              <th scope="col" class="heading">6:00PM</th>
+              <th scope="col" class="heading">Totals</th>
+            </thead>
+          </table>
+        </div>
 
-      <footer>
+        <main>
+            <div class="inputs">
+              <form id="forms">
+                <label>Location Name:</label>
+                  <input id="location" type="text" name="locale" alt="Location name."></input>
+                <label>Min. Customers per Hour:</label>
+                  <input id="min" type="number" name="min" alt="Minimum Customers per Hour."></input>
+                <label>Max. Customers per Hour:</label>
+                  <input id="max" type="number" name="max" alt="Maximum Customers per Hour."></input>
+                <label>Avg. Donuts Purchased:</label>
+                  <input id="avg" type="number" name="average" alt="Average Donuts Purchased."></input>
+                <button id="calc" alt="Press to submit new data.">Add New Data</button>
+                <button id="update" alt="Press to update existing locations">Update Existing Location</button>
+              </form>
+            </div>
+        </main>
 
-        <div id = "easterEgg"></div>
+        <footer>
 
-      </footer>
+          <div id = "easterEgg"></div>
 
-      <canvas id='myChart' height='400' width='1000'></canvas>
+        </footer>
 
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
+        <canvas id='myChart' height='400' width='1000'></canvas>
 
-        <script src="donuts.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
 
-    </body>
+          <script src="donuts.js"></script>
+
+      </body>
+    </div>
   </html>

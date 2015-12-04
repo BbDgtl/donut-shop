@@ -171,6 +171,7 @@ document.getElementById("update").ondblclick = function() {
 };
 
 //*********************//CHART.JS PRACTICE//**************************************//
+//Create a chart that accurately displays the data.
 
 var ctx = document.getElementById("myChart").getContext("2d");
 var data = {
