@@ -3,19 +3,34 @@
     <head>
 
       <title>Top Pot Donuts</title>
+      <!-- This is the HTML for my Donut Shop project. At this time, it will print out data of existing shops in a table, it will also add NEW data when inputted and should update data as well. There is also an easter egg included. 12/01/2015 Adding layout and styling to my donnut shop page. -->
 
       <link rel="stylesheet" href="style.css" type="text/css">
+      <!-- This link is supposed to help with screen width and shrinking/stretching depending on available viewscreen. -->
+      <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="800.css" />
 
     </head>
 
     <body id="main">
-      <header>
-        <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg" />
-        <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
-      </header>
+      <div id="header">
+        <header>
+          <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg" />
+          <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
+          <nav>
+            <ul>
+              <li><a href="#name_of_target">Biography</a></li>
+              <li>Calculator</li>
+              <li>Chart</li>
+            </ul>
+          </nav>
+        </header>
+      </div>
 
-        <p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p>
+      <div id="introParagraph">
+        <a name="bioLink"><p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p></a>
+      </div>
 
+      <div id="donutTable">
         <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
           <thead id="heading" class="firstRow">
             <th scope="col" class="heading">Top Pot Locations</th>
@@ -34,6 +49,7 @@
             <th scope="col" class="heading">Totals</th>
           </thead>
         </table>
+      </div>
 
       <main>
           <div class="inputs">
