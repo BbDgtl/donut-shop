@@ -1,66 +1,113 @@
 <!DOCTYPE html>
   <html>
     <head>
-
       <title>Top Pot Donuts</title>
+
+      <!-- This is the HTML for my Donut Shop project. At this time, it will print out data of existing shops in a table, it will also add NEW data when inputted and should update data as well. There is also an easter egg included. 12/01/2015 Adding layout and styling to my donut shop page. -->
 
       <link rel="stylesheet" href="style.css" type="text/css">
 
+      <!-- This link is supposed to help with screen width and shrinking/stretching depending on available viewscreen. -->
+
+      <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="800.css" />
     </head>
+      <body id="main">
+        <div id = "page">
+        <!--
+        1. Add either a fixed width or fluid width layout.
+        2. Extend your donus shop program with the following CSS components:
+          -An element that uses fixed positioning.
+          -An element that uses absolute positioning.
+          -An element that uses relative positioning.
+        -->
 
-    <body id="main">
-      <header>
-        <img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg">
-        <h1 id="mainHeading">Top Pot Donuts: Prep Calculator</h1>
-      </header>
+            <header>
+              <a href="www.toppotdoughnuts.com"><img class="logo" alt="Top Pot Logo" src="images/topPot.jpeg" /></a>
+              <h1 id="mainHeading">Top Pot: Hand-Forged Doughnuts & Coffee</h1>
+              <nav id="main-nav">
+                <ul>
+                  <li><a href="#name_of_target">Our Story</a></li>
+                  <li><a href="#name_of_target">Calculator</a></li>
+                  <li><a href="#name_of_target">Chart</a></li>
+                </ul>
+              </nav>
+            </header>
 
-        <p id="intro">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p>
+        <div id="content">
+          <article id="introParagraph">
+            <a name="bioLink">
+              <h2 class="bioHeadings">Our Story</h2>
+              <p>Begun in February 2002 out of a small brick storefront on north Capitol Hill in Seattle, Top Pot paired a vintage aesthetic with a gourmet spin on the traditional coffee and doughnuts pairing.</p>
 
-        <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
-          <thead id="heading" class="firstRow">
-            <th scope="col" class="heading">Top Pot Locations</th>
-            <th scope="col" class="heading">7:00AM</th>
-            <th scope="col" class="heading">8:00AM</th>
-            <th scope="col" class="heading">9:00AM</th>
-            <th scope="col" class="heading">10:00AM</th>
-            <th scope="col" class="heading">11:00AM</th>
-            <th scope="col" class="heading">12:00AM</th>
-            <th scope="col" class="heading">1:00PM</th>
-            <th scope="col" class="heading">2:00PM</th>
-            <th scope="col" class="heading">3:00PM</th>
-            <th scope="col" class="heading">4:00PM</th>
-            <th scope="col" class="heading">5:00PM</th>
-            <th scope="col" class="heading">6:00PM</th>
-            <th scope="col" class="heading">Totals</th>
-          </thead>
-        </table>
+              <h2 class="bioHeadings">Serendipity</h3>
+              <p>Years earlier, two of our co-founders spied a vintage rustic (and rusty) neon sign gleaming above a boarded-up Chinese restaurant called "Topspot". They bought the sign, and then left it idle in a backyard for four years, further rusting and creating a home for raccoons. Then, when the sign was finally driven off to be restored, the center "S" fell off, leaving the words "Top Pot" behind.</p>
 
-      <main>
-          <div class="inputs">
-            <form id="forms">
-              <label>Location Name:</label>
-                <input id="location" type="text" name="locale" alt="Location name."></input>
-              <label>Min. Customers per Hour:</label>
-                <input id="min" type="number" name="min" alt="Minimum Customers per Hour."></input>
-              <label>Max. Customers per Hour:</label>
-                <input id="max" type="number" name="max" alt="Maximum Customers per Hour."></input>
-              <label>Avg. Donuts Purchased:</label>
-                <input id="avg" type="number" name="average" alt="Average Donuts Purchased."></input>
-              <button id="calc" alt="Press to submit new data.">Add New Data</button>
-              <button id="update" alt="Press to update existing locations">Update Existing Location</button>
-            </form>
-          </div>
-      </main>
+              <h2 class="bioHeadings">Inspiration</h3>
+              <p>The sign became Top Pot's symbol of blending the old with the new. Our founders sought to create a doughnut shop that moved away from the fluorescent-lit fast food aesthetic. Instead, they created an oasis, where patrons could slow down and savor the nostalgia and taste of a secret 1920s doughnut recipe in a gorgeous vintage environment.</p>
 
-      <footer>
+              <h2 class="bioHeadings">Success</h3>
+              <p>Today, Top Pot Doughnuts can proudly claim a rabid fan base and extraordinary growth. Our hand-forged doughnuts can be found in cafes throughout western Washington and Dallas Texas.</p>
 
-      </footer>
+              <h2 class="bioHeadings">Commitment</h3>
+              <p>We feel so fortunate to have enjoyed such success with a business model that is this much fun. And we remain committed to the simple ideals that brought us this far—quality, inclusiveness, and integrity in every single thing we do.</p>
+            </a>
+          </article>
 
-      <canvas id='myChart' height='400' width='1000'></canvas>
+          <article id="donutTable">
+            <p id="tableDescription">This table displays the number of donuts each Top Pot Donuts location should make per hour, per day. Below the table is form to enter additonal data to create a new location.</p>
+            <table id="topPot" class="donutTable" alt="This table displays the data as explained in the previous paragraph.">
+              <thead id="heading" class="firstRow">
+                <th scope="col" class="heading">Top Pot Locations</th>
+                <th scope="col" class="heading">7:00AM</th>
+                <th scope="col" class="heading">8:00AM</th>
+                <th scope="col" class="heading">9:00AM</th>
+                <th scope="col" class="heading">10:00AM</th>
+                <th scope="col" class="heading">11:00AM</th>
+                <th scope="col" class="heading">12:00AM</th>
+                <th scope="col" class="heading">1:00PM</th>
+                <th scope="col" class="heading">2:00PM</th>
+                <th scope="col" class="heading">3:00PM</th>
+                <th scope="col" class="heading">4:00PM</th>
+                <th scope="col" class="heading">5:00PM</th>
+                <th scope="col" class="heading">6:00PM</th>
+                <th scope="col" class="heading">Totals</th>
+              </thead>
+            </table>
+              <div class="inputs">
+                <form id="forms">
+                  <label>Location Name:</label>
+                    <input id="location" type="text" name="locale" alt="Location name."></input>
+                  <label>Min. Customers per Hour:</label>
+                    <input id="min" type="number" name="min" alt="Minimum Customers per Hour."></input>
+                  <label>Max. Customers per Hour:</label>
+                    <input id="max" type="number" name="max" alt="Maximum Customers per Hour."></input>
+                  <label>Avg. Donuts Purchased:</label>
+                    <input id="avg" type="number" name="average" alt="Average Donuts Purchased."></input>
+                  <button id="calc" alt="Press to submit new data.">Add New Data</button>
+                  <button id="update" alt="Press to update existing locations">Update Existing Location</button>
+                </form>
+              </div>
+          </article>
 
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
+          <article id="chart">
+            <canvas id='myChart' height='400' width='1000'></canvas>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
+          </article>
+        </div>
 
-        <script src="donuts.js"></script>
+        <aside>
 
-    </body>
+          <img />
+          <img />
+          <img />
+          <img />
+
+        </aside>
+
+        <footer>
+          <script src="donuts.js"></script>
+        </footer>
+
+        </div>
+      </body>
   </html>

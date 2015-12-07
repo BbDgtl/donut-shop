@@ -136,6 +136,7 @@ var newShopData = function(event) {
   var newContent = document.getElementById('topPot');
   newLocation.getDonutsByHour();
   newLocation.createRow();
+  newLocation.getTotalDonuts();
 };
 
 var calcButton = document.getElementById("calc");
@@ -150,11 +151,12 @@ var updateStore = function(event) {
   var newAverage = document.getElementById('avg').value;
   for (var i = 0; i < locationsArray.length; i++) {
     if (newLocationName === locationsArray[i].shopLocation) {
-      locationsArray.splice(i, 1);
+      topPot.deleteRow(i);
 
       var newLocation = new DonutShop(newLocationName, newMinCust, newMaxCust, newAverage);
       newLocation.getDonutsByHour();
       newLocation.createRow();
+      newLocation.getTotalDonuts();
       return;
     }
   }
@@ -163,7 +165,13 @@ var updateStore = function(event) {
 var updateButton = document.getElementById("update");
 updateButton.addEventListener("click", updateStore, false);
 
+//Create an Easter Egg.
+document.getElementById("update").ondblclick = function() {
+  document.getElementById("easterEgg").innerHTML = alert("GIMME ALL THE DONUTS!");
+};
+
 //*********************//CHART.JS PRACTICE//**************************************//
+//Create a chart that accurately displays the data.
 
 var ctx = document.getElementById("myChart").getContext("2d");
 var data = {

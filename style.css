@@ -1,34 +1,72 @@
+/**************Styling for entire page*********/
+
 * {
    font-family: "Lucida Console", Courier, monospace, sans-serif;
 }
 
 body {
-  max-width: 80%;
   margin: 0 auto;
-  background-color: #A6BDC8;
+  background-color: #8F8D8E;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: relative;
+#page {
+  width: 960px;
+  margin: auto;
 }
+
+/***************Heading styling***************/
 
 .logo {
   height: 100px;
   width: 100px;
+  position: relative;
+  float: left;
+  margin-top: 7px;
+  margin-left: 7px;
 }
 
-#intro {
-  max-width: 100%;
+#main-nav {
+  width: 920px;
+  text-align: center;
+  }
+
+#main-nav li {
+  display: inline;
+  padding-right: 100px;
 }
+
+#mainHeading {
+  text-align: center;
+}
+
+header {
+  max-height: 250px;
+  background-color: #A6BDC8;
+  margin-bottom: 20px;
+  border: solid black 1px;
+}
+
+/*********Styling for the Body**************/
+
+article {
+  border: solid black 1px;
+  padding: 10px;
+  background-color: #A6BDC8;
+  margin-bottom: 20px;
+  max-width: 1200px;
+}
+
+.bioHeadings {
+  text-align: center;
+}
+
+/*********table styling****************/
 
 table {
   background-color: #FAF4EE;
-  border-style: solid;
-  margin: 0 auto;
+  border: solid black 1px;
   max-width: 100%;
+  margin-left: -10px;
 }
 
 thead {
@@ -51,20 +89,27 @@ form {
   border: 1px solid black;
 }
 
+/***********Styling for the buttons*********/
+
 .inputs {
   max-width: 100%;
   clear: both;
+  margin-top: 20px;
 }
 
 .inputs input {
   max-width: 100%;
   clear: both;
+  margin-top: 10px;
 }
+
 label {
     display: inline-block;
     width: 250px;
     text-align: right;
 }
+
+
 
 
 
